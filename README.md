@@ -1,4 +1,4 @@
-# A docker-compose.yml file for WordPress
+# Docker-compose.yml file for WordPress
 
 ## Usage
 
