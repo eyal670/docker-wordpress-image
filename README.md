@@ -13,7 +13,7 @@ This is a really simple environment for themes & plugins development. Nothing fa
 * Your WordPress installation will be available at `http://localhost:8000`
 * the `wp-content` folder you'll find in this repo will be shared with the WordPress installation, put your code there.
 
-### Extra Notes
+## Extra Notes
 
 ##### fix wordpress asking for ftp credentials when trying to add files (plugin install, upload media)
 * add this define to wp-config.php ` define('FS_METHOD','direct'); ` , see use of WORDPRESS_CONFIG_EXTRA variable in docker-compose.yml
