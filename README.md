@@ -16,6 +16,6 @@ This is a really simple environment for themes & plugins development. Nothing fa
 ## Extra Notes
 
 ##### fix wordpress asking for ftp credentials when trying to add files (plugin install, upload media)
-* add this define to wp-config.php ` define('FS_METHOD','direct'); ` , see use of WORDPRESS_CONFIG_EXTRA variable in docker-compose.yml
+* add this define to wp-config.php ` define('FS_METHOD','direct'); ` allready applied, see use of WORDPRESS_CONFIG_EXTRA variable in docker-compose.yml
 https://hub.docker.com/_/wordpress
 
