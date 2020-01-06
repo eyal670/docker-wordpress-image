@@ -35,5 +35,9 @@ services:
          - '443:443'
        environment:
           DATABASE_HOST: db
+#    sass:
+#        image: larryprice/sass
+#        volumes:
+#          - ./wp-content/themes/astra/landing-pages/css:/src #path-to-file.scss:/src - leave as is
 volumes:
     db_data:
