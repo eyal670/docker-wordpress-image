@@ -1,0 +1,10 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore all:
+*
+# except:
+!docker-compose.yml
+!README.md
+!uploads.ini
+!.gitignore

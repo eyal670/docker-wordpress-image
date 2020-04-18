@@ -35,5 +35,14 @@ services:
          - '443:443'
        environment:
           DATABASE_HOST: db
+   ngrok:
+    image: shkoliar/ngrok:latest
+    ports:
+      - 4551:4551
+    links:
+      - wordpress
+    environment:
+      - DOMAIN=wordpress
+      - PORT=80
 volumes:
     db_data:
