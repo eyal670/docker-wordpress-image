@@ -44,5 +44,9 @@ services:
     environment:
       - DOMAIN=wordpress
       - PORT=80
+#  sass:
+#   image: larryprice/sass
+#   volumes:
+#     - ./wp-content/themes/astra/landing-pages/css:/src #path-to-file.scss:/src - leave as is
 volumes:
     db_data:
