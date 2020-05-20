@@ -24,8 +24,12 @@ services:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: user
        WORDPRESS_DB_PASSWORD: password
+       #WORDPRESS_TABLE_PREFIX: 'nac_'
        WORDPRESS_CONFIG_EXTRA: |
         define('FS_METHOD','direct'); //fix wordpress asking for ftp connection to install plugins
+        //@ini_set('log_errors','On'); // enable or disable php error logging (use 'On' or 'Off')
+        //@ini_set('display_errors','Off'); // enable or disable public display of errors (use 'On' or 'Off')
+        //@ini_set('error_log','./php-errors.log'); // path to server-writable log file
    phpmyadmin:
        image: bitnami/phpmyadmin:latest
        depends_on:
@@ -44,9 +48,5 @@ services:
     environment:
       - DOMAIN=wordpress
       - PORT=80
-#  sass:
-#   image: larryprice/sass
-#   volumes:
-#     - ./wp-content/themes/astra/landing-pages/css:/src #path-to-file.scss:/src - leave as is
 volumes:
     db_data:
