@@ -39,7 +39,8 @@ services:
         - '8001:80'
       environment:
         PMA_HOST: db
-        MYSQL_ROOT_PASSWORD: password 
+        MYSQL_ROOT_PASSWORD: password
+        UPLOAD_LIMIT: 3000000000
    ngrok:
     image: shkoliar/ngrok:latest
     ports:
