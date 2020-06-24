@@ -25,11 +25,12 @@ services:
        WORDPRESS_DB_USER: user
        WORDPRESS_DB_PASSWORD: password
        #WORDPRESS_TABLE_PREFIX: 'nac_'
+       WORDPRESS_DEBUG: 'true'
        WORDPRESS_CONFIG_EXTRA: |
         define('FS_METHOD','direct'); //fix wordpress asking for ftp connection to install plugins
-        //@ini_set('log_errors','On'); // enable or disable php error logging (use 'On' or 'Off')
-        //@ini_set('display_errors','Off'); // enable or disable public display of errors (use 'On' or 'Off')
-        //@ini_set('error_log','./php-errors.log'); // path to server-writable log file
+        define( 'WP_DEBUG_LOG', true ); //send logs to /wp-content/debug.log
+        define( 'WP_DEBUG_DISPLAY', false ); //don't displat errors on screen
+        
    phpmyadmin:
       depends_on:
         - db
