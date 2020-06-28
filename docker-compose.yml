@@ -28,8 +28,14 @@ services:
        WORDPRESS_DEBUG: 'true'
        WORDPRESS_CONFIG_EXTRA: |
         define('FS_METHOD','direct'); //fix wordpress asking for ftp connection to install plugins
+        
+        //define log policy
         define( 'WP_DEBUG_LOG', true ); //send logs to /wp-content/debug.log
         define( 'WP_DEBUG_DISPLAY', false ); //don't displat errors on screen
+
+        //set local dev URL
+        define( 'WP_HOME', 'http://localhost:8000' );
+        define( 'WP_SITEURL', 'http://localhost:8000' );
         
    phpmyadmin:
       depends_on:
