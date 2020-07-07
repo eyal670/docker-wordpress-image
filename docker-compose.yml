@@ -18,7 +18,7 @@ services:
        - "8000:80"
      restart: always
      volumes:
-       - ./wp-content/:/var/www/html/wp-content
+       - ./public_html/:/var/www/html
        - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
      environment:
        WORDPRESS_DB_HOST: db:3306
