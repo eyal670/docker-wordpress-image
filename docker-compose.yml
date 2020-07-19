@@ -3,7 +3,7 @@ services:
    db:
      image: mysql:5.7
      volumes:
-       - db_data:/var/lib/mysql
+       - ./db_data:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: password
@@ -57,5 +57,5 @@ services:
     environment:
       - DOMAIN=wordpress
       - PORT=80
-volumes:
-    db_data:
+# volumes:
+#     db_data:
